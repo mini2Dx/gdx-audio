@@ -33,7 +33,7 @@ repositories {
 }
 	
 group = 'org.mini2Dx'
-version = "$libgdxVersion"
+version = "$libgdxVersion" + ".1"
 	
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -89,7 +89,7 @@ task copyAudioInterfaces(type: Copy, dependsOn: copyLicenseFiles) {
 		filter { String line ->
         	line.contains('import') ? (
 				line.contains('com.badlogic.gdx.utils') ? line.replace('com.badlogic.gdx.utils', 'org.mini2Dx.gdx.utils') : null
-			) : line
+			) : (line.contains('com.badlogic.gdx') ? line.replace('com.badlogic.gdx', 'org.mini2Dx.gdx') : line)
     	}
 	}
 	into 'src/main/java/org/mini2Dx/gdx/audio'
