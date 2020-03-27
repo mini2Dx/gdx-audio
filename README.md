@@ -8,7 +8,7 @@ The gradle build will checkout a specific version of libgdx, copy the audio sour
 ## Usage
 
 ```gradle
-compile "org.mini2Dx:gdx-audio:1.9.5"
+compile "org.mini2Dx:gdx-audio:1.9.10"
 ```
 
 This project's only dependency is [gdx-collections](https://github.com/mini2Dx/gdx-collections).
